@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
   @State public var searchText = ""
-  @State public var selectedGradient = Color.blueberryBlush
+  @State public var selectedGradient = Color.mysticTwilight
   @State public var isTapped: Bool = false
 
   let userInputs: [String]
