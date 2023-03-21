@@ -1,10 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var searchText = ""
-  @State private var showGradientPicker = false
-  @State private var selectedGradient = Color.blueberryBlush
-  @State private var isTapped: Bool = false
+  @State public var searchText = ""
+  @State public var selectedGradient = Color.blueberryBlush
+  @State public var isTapped: Bool = false
 
   let userInputs: [String]
 
