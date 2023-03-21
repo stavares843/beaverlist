@@ -7,36 +7,54 @@
 
 import XCTest
 
+
 class beaverlistUITests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+            continueAfterFailure = false
+            let app = XCUIApplication()
+            app.launch()
         }
+        
+        func testSearchWithNoResults() throws {
+            let app = XCUIApplication()
+            let searchField = app.searchFields.firstMatch
+            app.searchFields["Search"].tap()
+            searchField.typeText("76")
+            app.staticTexts["No results found for '76' 🦫"].tap()
+            
+        }
+        
+        func testSearchWithResults() throws {
+            let app = XCUIApplication()
+            let searchField = app.searchFields.firstMatch
+            searchField.tap()
+            searchField.typeText("Japan")
+            app.staticTexts["This line includes a word from the Japanese writing system: こんにちは"].tap()
+        }
+    
+    func testThemesMenu() throws {
+        let app = XCUIApplication()
+        let themesButton = app.buttons["themes"]
+        themesButton.tap()
+        let collectionViewsQuery = app.collectionViews
+        collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Blueberry Blush"]/*[[".cells.buttons[\"Blueberry Blush\"]",".buttons[\"Blueberry Blush\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        themesButton.tap()
+        collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Slate Mist"]/*[[".cells.buttons[\"Slate Mist\"]",".buttons[\"Slate Mist\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        themesButton.tap()
+        collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Mystic Twilight"]/*[[".cells.buttons[\"Mystic Twilight\"]",".buttons[\"Mystic Twilight\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        themesButton.tap()
+        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Sunset Blaze"]/*[[".cells.buttons[\"Sunset Blaze\"]",".buttons[\"Sunset Blaze\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    }
+    
+    func testDismissSearch() throws {
+        let app = XCUIApplication()
+        let searchField = app.searchFields.firstMatch
+        searchField.tap()
+        searchField.typeText("test dismissing search")
+        searchField.buttons["Clear text"].tap()
+        searchField.typeText("test dismissing search - cancel")
+        app/*@START_MENU_TOKEN@*/.staticTexts["Cancel"]/*[[".buttons[\"Cancel\"].staticTexts[\"Cancel\"]",".staticTexts[\"Cancel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+                
     }
 }
