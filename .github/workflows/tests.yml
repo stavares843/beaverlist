@@ -1,0 +1,17 @@
+name: iOS Tests
+
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+    - name: Build and test
+      run: |
+        xcodebuild test -scheme Beaverlist -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max,OS=15.2'
