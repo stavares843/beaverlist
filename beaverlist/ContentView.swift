@@ -46,21 +46,21 @@ struct ContentView: View {
                         Text("Blueberry Blush")
                         Image("blueberry_blush")
                     }
-                    
+
                     Button(action: {
                         selectedGradient = Color.slateMist
                     }) {
                         Text("Slate Mist")
                         Image("slate_mist")
                     }
-                    
+
                     Button(action: {
                         selectedGradient = Color.mysticTwilight
                     }) {
                         Text("Mystic Twilight")
                         Image("mystic_twilight")
                     }
-                    
+
                     Button(action: {
                         selectedGradient = Color.sunsetBlaze
                     }) {
@@ -98,28 +98,26 @@ struct ContentView: View {
                                     .onTapGesture {
                                         let fullString = input
                                         var textToCopy = ""
-                                        
+
                                         if let startRange = fullString.range(of: ">>"),
                                            let endRange = fullString.range(of: "<<", range: startRange.upperBound..<fullString.endIndex) {
                                             textToCopy = String(fullString[startRange.upperBound..<endRange.lowerBound])
                                         } else if let range = fullString.range(of: ":") {
                                             textToCopy = String(fullString[range.upperBound...])
                                         }
-                                        
 
                                             // Copy text to clipboard
                                             UIPasteboard.general.string = textToCopy.trimmingCharacters(in: .whitespacesAndNewlines)
                                             print("Copied to clipboard: \(textToCopy)")
                                          }
-                                
-                                
+
                                 }
                                 Spacer()
                             }
                         .padding(.trailing, 10)
                         }
                     }
-                
+
                 }
             }
             Spacer()
@@ -215,7 +213,7 @@ struct GradientPicker: View {
     }
     }
 */
-    
+
     struct SearchBar: UIViewRepresentable {
         @Binding var text: String
         let placeholder: String
@@ -229,7 +227,7 @@ struct GradientPicker: View {
 
             func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
                 text = searchText
-                
+
                 // Show cancel button when user starts searching
                 searchBar.showsCancelButton = true
             }
@@ -239,11 +237,11 @@ struct GradientPicker: View {
                 searchBar.resignFirstResponder()
                 text = ""
             }
-            
+
             func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
                 searchBar.showsCancelButton = true
             }
-            
+
             func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
                 searchBar.showsCancelButton = false
             }

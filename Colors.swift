@@ -27,31 +27,31 @@ extension Color {
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
-    
+
     static let honeyDew = LinearGradient(
             gradient: Gradient(colors: [Color(hex: 0x43C6AC), Color(hex: 0xF8FFAE)]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
-    
+
     static let blueberryBlush = LinearGradient(
         gradient: Gradient(colors: [.blue, .purple]),
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
-    
+
     static let mysticTwilight =  LinearGradient(
         gradient: Gradient(
         colors: [Color(hex: 0x3a6186), Color(hex: 0x89253e)]),
         startPoint: .leading,
         endPoint: .trailing
     )
-    
+
     static let sunsetBlaze =  LinearGradient(
         gradient: Gradient(
         colors: [.red, .yellow]),
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
-}
 
+}
