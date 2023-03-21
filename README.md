@@ -2,6 +2,10 @@
   <img src="https://user-images.githubusercontent.com/29093946/226750819-82d48dc1-7e4f-4477-9d75-0636ac16059b.gif"/>
 </p>
 
+<p align="center">
+  <a href="https://github.com/stavares843/beaverlist/actions"><img src="https://github.com/stavares843/beaverlist/actions/workflows/tests.yml/badge.svg" /></a>
+   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat" /></a>
+</p>
 
 ## Description
 
