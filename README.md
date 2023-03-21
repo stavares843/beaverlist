@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/29093946/226667055-fe33237a-af19-4c13-8c7e-a9e14da21791.gif"/>
+  <img src="https://user-images.githubusercontent.com/29093946/226750819-82d48dc1-7e4f-4477-9d75-0636ac16059b.gif"/>
 </p>
 
 
 ## Description
 
 
-Built with SwiftUI, *Beaverlist* is a tool for performing data input manual testing of iOS apps. When tapping will only copy what is helpful to test, and you can create your own list. 
+Built with SwiftUI, *Beaverlist* is a tool for performing data input manual testing of iOS apps. When tapping will only copy what is helpful to test, and you can create your own list by editing it [here](https://github.com/stavares843/beaverlist/blob/main/beaverlist/user_inputs.txt).
 
 <img src="https://user-images.githubusercontent.com/29093946/226688656-1f9b5fa4-7101-4eff-ae7c-e55db8a7f003.png" width="301" height="576">
 
@@ -23,50 +23,23 @@ Built with SwiftUI, *Beaverlist* is a tool for performing data input manual test
 </p>
 
 
-- in your iPhone, go to `General` > `Device Management` and trust in your own team, added in the previous step
-- compile
-- ready to use, now you can copy and paste various data inputs in other iOS apps for testing purposes :hammer:
+- In your iPhone, go to `General` > `Device Management` and trust in your own team, added in the previous step
+- Compile
+- Ready to use, now you can copy and paste various data inputs in other iOS apps for testing purposes :hammer:
 
 ## Usage
 
-- open the app that you want to test
-- open *Beaverlist* app
-- tap in any input and will automatically copy-paste the relevant input
-- slide to the app you want to paste 
-- done
+- Open the app that you want to test
+- Open *Beaverlist* app
+- Tap in any input and will automatically copy-paste the relevant input
+- Slide to the app you want to paste 
+- Done
 
 https://user-images.githubusercontent.com/29093946/226730914-2edefcc7-3684-4a42-a206-d19194b55ef3.mov
 
 ## Themes
 
-
-
-<table>
-    <thead>
-        <tr>
-            <th>BlueberryBlush</th>
-            <th>SlateMist</th>
-            <th>MysticTwilight</th>
-            <th>SunsetBlaze</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <img src="https://user-images.githubusercontent.com/29093946/226737486-8b4fa9f1-6ad8-41cd-9d36-2ca89de578be.png" />
-            </td>
-            <td>
-                <img src="https://user-images.githubusercontent.com/29093946/226737682-adb1ee5d-820b-4640-b63d-a8cec767938b.png" />
-            </td>
-            <td>
-                <img src="https://user-images.githubusercontent.com/29093946/226737736-77064d4a-79e6-4e1b-8c71-663aaffb1231.png" />
-            </td>
-            <td>
-                <img src="https://user-images.githubusercontent.com/29093946/226737792-b849c4dd-c9a2-42bd-839d-93743a695328.png" />
-            </td>
-        </tr>
-    </tbody>
-</table>
+https://user-images.githubusercontent.com/29093946/226753666-99150765-79b0-4525-a765-a9fd2c82704f.mov
 
 
 # License
