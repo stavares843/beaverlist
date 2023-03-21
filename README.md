@@ -6,7 +6,7 @@
 ## Description
 
 
-Built with SwiftUI, *Beaverlist* is a tool for performing data input manual testing of iOS apps. When tapping will only copy what is helpful to test, and you can create your own list. 
+Built with SwiftUI, *Beaverlist* is a tool for performing data input manual testing of iOS apps. When tapping will only copy what is helpful to test, and you can create your own list by editing it [here](https://github.com/stavares843/beaverlist/blob/main/beaverlist/user_inputs.txt)
 
 <img src="https://user-images.githubusercontent.com/29093946/226688656-1f9b5fa4-7101-4eff-ae7c-e55db8a7f003.png" width="301" height="576">
 
