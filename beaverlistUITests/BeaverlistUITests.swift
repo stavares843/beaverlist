@@ -7,7 +7,6 @@
 
 import XCTest
 
-
 class beaverlistUITests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -15,16 +14,16 @@ class beaverlistUITests: XCTestCase {
             let app = XCUIApplication()
             app.launch()
         }
-        
+
         func testSearchWithNoResults() throws {
             let app = XCUIApplication()
             let searchField = app.searchFields.firstMatch
             app.searchFields["Search"].tap()
             searchField.typeText("76")
             app.staticTexts["No results found for '76' 🦫"].tap()
-            
+
         }
-        
+
         func testSearchWithResults() throws {
             let app = XCUIApplication()
             let searchField = app.searchFields.firstMatch
@@ -32,7 +31,7 @@ class beaverlistUITests: XCTestCase {
             searchField.typeText("Japan")
             app.staticTexts["This line includes a word from the Japanese writing system: こんにちは"].tap()
         }
-    
+
     func testThemesMenu() throws {
         let app = XCUIApplication()
         let themesButton = app.buttons["themes"]
@@ -46,7 +45,7 @@ class beaverlistUITests: XCTestCase {
         themesButton.tap()
         app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Sunset Blaze"]/*[[".cells.buttons[\"Sunset Blaze\"]",".buttons[\"Sunset Blaze\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
-    
+
     func testDismissSearch() throws {
         let app = XCUIApplication()
         let searchField = app.searchFields.firstMatch
@@ -55,6 +54,6 @@ class beaverlistUITests: XCTestCase {
         searchField.buttons["Clear text"].tap()
         searchField.typeText("test dismissing search - cancel")
         app/*@START_MENU_TOKEN@*/.staticTexts["Cancel"]/*[[".buttons[\"Cancel\"].staticTexts[\"Cancel\"]",".staticTexts[\"Cancel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-                
+
     }
 }
