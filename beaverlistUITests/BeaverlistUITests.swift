@@ -54,6 +54,19 @@ class BeaverlistUITests: XCTestCase {
         searchField.buttons["Clear text"].tap()
         searchField.typeText("test dismissing search - cancel")
         app/*@START_MENU_TOKEN@*/.staticTexts["Cancel"]/*[[".buttons[\"Cancel\"].staticTexts[\"Cancel\"]",".staticTexts[\"Cancel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    }
 
+    func testShowToast() throws {
+        let app = XCUIApplication()
+        app.staticTexts["This string contains trademark symbol: ™"].tap()
+        // Check if the toast is displayed
+        app.staticTexts["Copied to clipboard"].tap()
+    }
+
+    func testCopyToClipboard() {
+        let app = XCUIApplication()
+        app.staticTexts["This string contains trademark symbol: ™"].tap()
+        // Assert that the correct text was copied to the clipboard
+        XCTAssertEqual(UIPasteboard.general.string, "™")
     }
 }
