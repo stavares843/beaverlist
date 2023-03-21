@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5627ADA329C77D420049C7DF /* beaverlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627ADA229C77D420049C7DF /* beaverlist.swift */; };
+		5627ADA329C77D420049C7DF /* Beaverlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627ADA229C77D420049C7DF /* Beaverlist.swift */; };
 		5627ADA529C77D420049C7DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627ADA429C77D420049C7DF /* ContentView.swift */; };
 		5627ADA729C77D440049C7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5627ADA629C77D440049C7DF /* Assets.xcassets */; };
 		5627ADAA29C77D440049C7DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5627ADA929C77D440049C7DF /* Preview Assets.xcassets */; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		5627AD9F29C77D420049C7DF /* Beaverlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beaverlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5627ADA229C77D420049C7DF /* beaverlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beaverlist.swift; sourceTree = "<group>"; };
+		5627ADA229C77D420049C7DF /* Beaverlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beaverlist.swift; sourceTree = "<group>"; };
 		5627ADA429C77D420049C7DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		5627ADA629C77D440049C7DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5627ADA929C77D440049C7DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		5627ADA129C77D420049C7DF /* beaverlist */ = {
 			isa = PBXGroup;
 			children = (
-				5627ADA229C77D420049C7DF /* beaverlist.swift */,
+				5627ADA229C77D420049C7DF /* Beaverlist.swift */,
 				5627ADA429C77D420049C7DF /* ContentView.swift */,
 				5627ADA629C77D440049C7DF /* Assets.xcassets */,
 				5627ADA829C77D440049C7DF /* Preview Content */,
@@ -272,7 +272,7 @@
 			files = (
 				5627ADA529C77D420049C7DF /* ContentView.swift in Sources */,
 				5627ADCF29C7CC8A0049C7DF /* Colors.swift in Sources */,
-				5627ADA329C77D420049C7DF /* beaverlist.swift in Sources */,
+				5627ADA329C77D420049C7DF /* Beaverlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

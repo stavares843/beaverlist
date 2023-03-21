@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct beaverlist: App {
+struct Beaverlist: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

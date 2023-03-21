@@ -1,13 +1,13 @@
 //
 //  BeaverlistUITestsLaunchTests.swift
-//  beaverlistUITestsLaunchTests
+//  BeaverlistUITestsLaunchTests
 //
 //  Created by Sara on 19/03/2023.
 //
 
 import XCTest
 
-class beaverlistUITestsLaunchTests: XCTestCase {
+class BeaverlistUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

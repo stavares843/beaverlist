@@ -1,13 +1,13 @@
 //
 //  BeaverlistUITests.swift
-//  beaverlistUITests
+//  BeaverlistUITests
 //
 //  Created by Sara on 19/03/2023.
 //
 
 import XCTest
 
-class beaverlistUITests: XCTestCase {
+class BeaverlistUITests: XCTestCase {
 
     override func setUpWithError() throws {
             continueAfterFailure = false
