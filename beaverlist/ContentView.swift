@@ -4,6 +4,7 @@ struct ContentView: View {
   @State public var searchText = ""
   @State public var selectedGradient = Color.mysticTwilight
   @State public var isTapped: Bool = false
+  @State private var showToast = false
 
   let userInputs: [String]
 
@@ -106,26 +107,42 @@ struct ContentView: View {
                         of: "<<", range: startRange.upperBound..<fullString.endIndex) {
                       textToCopy = String(fullString[startRange.upperBound..<endRange.lowerBound])
                     } else if let range = fullString.range(of: ":") {
-                      textToCopy = String(fullString[range.upperBound...])
-                    }
+                                          textToCopy = String(fullString[range.upperBound...])
+                                        }
 
-                    // Copy text to clipboard
-                    UIPasteboard.general.string = textToCopy.trimmingCharacters(
-                      in: .whitespacesAndNewlines)
-                    print("Copied to clipboard: \(textToCopy)")
-                  }
+                                        // Copy text to clipboard
+                                        UIPasteboard.general.string = textToCopy.trimmingCharacters(
+                                          in: .whitespacesAndNewlines)
+                                        print("Copied to clipboard: \(textToCopy)")
+
+                                        showToast = true
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                          showToast = false
+                                        }
+                                                         }
+                                                     }
+                                                     Spacer()
+                                                   }
+            .padding(.trailing, 10)
+                                                 }
+                                               }
 
               }
-              Spacer()
+                Spacer()
+
+                if showToast { // show the toast if `showToast` is true
+                    Text("Copied to clipboard")
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .background(selectedGradient)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .transition(.opacity)
+                        .animation(.easeInOut(duration: 0.3))
+                }
             }
-            .padding(.trailing, 10)
           }
         }
-
-      }
-    }
-    Spacer()
-  }
 
   struct SearchBar: UIViewRepresentable {
     @Binding var text: String
@@ -176,4 +193,3 @@ struct ContentView: View {
       uiView.text = text
     }
   }
-}
