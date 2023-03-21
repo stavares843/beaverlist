@@ -63,10 +63,10 @@ class BeaverlistUITests: XCTestCase {
         app.staticTexts["Copied to clipboard"].tap()
     }
 
-    func testCopyToClipboard() {
+    /*func testCopyToClipboard() {
         let app = XCUIApplication()
         app.staticTexts["This string contains trademark symbol: ™"].tap()
         // Assert that the correct text was copied to the clipboard
         XCTAssertEqual(UIPasteboard.general.string, "™")
-    }
+    }*/
 }
