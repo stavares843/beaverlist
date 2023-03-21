@@ -4,7 +4,7 @@ struct ContentView: View {
   @State public var searchText = ""
   @State public var selectedGradient = Color.mysticTwilight
   @State public var isTapped: Bool = false
-  @State private var showToast = false
+  @State public var showToast = false
 
   let userInputs: [String]
 
