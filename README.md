@@ -23,17 +23,17 @@ Built with SwiftUI, *Beaverlist* is a tool for performing data input manual test
 </p>
 
 
-- in your iPhone, go to `General` > `Device Management` and trust in your own team, added in the previous step
-- compile
-- ready to use, now you can copy and paste various data inputs in other iOS apps for testing purposes :hammer:
+- In your iPhone, go to `General` > `Device Management` and trust in your own team, added in the previous step
+- Compile
+- Ready to use, now you can copy and paste various data inputs in other iOS apps for testing purposes :hammer:
 
 ## Usage
 
-- open the app that you want to test
-- open *Beaverlist* app
-- tap in any input and will automatically copy-paste the relevant input
-- slide to the app you want to paste 
-- done
+- Open the app that you want to test
+- Open *Beaverlist* app
+- Tap in any input and will automatically copy-paste the relevant input
+- Slide to the app you want to paste 
+- Done
 
 https://user-images.githubusercontent.com/29093946/226730914-2edefcc7-3684-4a42-a206-d19194b55ef3.mov
 
