@@ -44,38 +44,38 @@ struct ContentView: View {
           .padding()
         Spacer()
 
-          Menu {
-              Button(action: {
-                  selectedGradient = Color.blueberryBlush
-              }) {
-                  Text("Blueberry Blush")
-                  Image("blueberry_blush")
-              }
-              Button(action: {
-                  selectedGradient = Color.slateMist
-              }) {
-                  Text("Slate Mist")
-                  Image("slate_mist")
-              }
-              Button(action: {
-                  selectedGradient = Color.mysticTwilight
-              }) {
-                  Text("Mystic Twilight")
-                  Image("mystic_twilight")
-              }
-              Button(action: {
-                  selectedGradient = Color.sunsetBlaze
-              }) {
-                  Text("Sunset Blaze")
-                  Image("sunset_blaze")
-              }
-          } label: {
-              Image("themes")
-                  .resizable()
-                  .frame(width: 40, height: 40)
-                  .font(.system(size: 15))
+        Menu {
+          Button(action: {
+            selectedGradient = Color.blueberryBlush
+          }) {
+            Text("Blueberry Blush")
+            Image("blueberry_blush")
           }
-          .padding(.trailing, 16)
+          Button(action: {
+            selectedGradient = Color.slateMist
+          }) {
+            Text("Slate Mist")
+            Image("slate_mist")
+          }
+          Button(action: {
+            selectedGradient = Color.mysticTwilight
+          }) {
+            Text("Mystic Twilight")
+            Image("mystic_twilight")
+          }
+          Button(action: {
+            selectedGradient = Color.sunsetBlaze
+          }) {
+            Text("Sunset Blaze")
+            Image("sunset_blaze")
+          }
+        } label: {
+          Image("themes")
+            .resizable()
+            .frame(width: 40, height: 40)
+            .font(.system(size: 15))
+        }
+        .padding(.trailing, 16)
       }
 
       SearchBar(text: $searchText, placeholder: "Search")
