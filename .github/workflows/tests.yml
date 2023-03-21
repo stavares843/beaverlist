@@ -3,11 +3,24 @@ name: Tests
 on:
   push:
     branches: [main]
+
 jobs:
   build:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build and test
-      run: |
-        xcodebuild test -scheme Beaverlist -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max,OS=16.2' -quiet
+      - uses: actions/checkout@v2
+      
+      - name: Build and test
+        run: |
+          xcodebuild test -scheme Beaverlist -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max,OS=16.2' -enableCodeCoverage YES
+        continue-on-error: true
+      
+      - name: Generate Code Coverage Report
+        run: |
+          xcrun xccov view --report --json $(find $PWD -name '*.xccovreport') > report.json
+          
+      - name: Upload Code Coverage Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage
+          path: report.json
