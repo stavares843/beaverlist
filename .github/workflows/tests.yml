@@ -10,4 +10,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build and test
       run: |
-        xcodebuild test -scheme Beaverlist -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max,OS=15.2'
+        xcodebuild test -scheme Beaverlist -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max,OS=16.2'
