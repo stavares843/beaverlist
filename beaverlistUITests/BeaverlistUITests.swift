@@ -1,5 +1,5 @@
 //
-//  beaverlistUITests.swift
+//  BeaverlistUITests.swift
 //  beaverlistUITests
 //
 //  Created by Sara on 19/03/2023.

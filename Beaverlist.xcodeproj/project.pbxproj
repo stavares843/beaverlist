@@ -12,8 +12,8 @@
 		5627ADA729C77D440049C7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5627ADA629C77D440049C7DF /* Assets.xcassets */; };
 		5627ADAA29C77D440049C7DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5627ADA929C77D440049C7DF /* Preview Assets.xcassets */; };
 		5627ADB429C77D440049C7DF /* beaverlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627ADB329C77D440049C7DF /* beaverlistTests.swift */; };
-		5627ADBE29C77D440049C7DF /* beaverlistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627ADBD29C77D440049C7DF /* beaverlistUITests.swift */; };
-		5627ADC029C77D440049C7DF /* beaverlistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627ADBF29C77D440049C7DF /* beaverlistUITestsLaunchTests.swift */; };
+		5627ADBE29C77D440049C7DF /* BeaverlistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627ADBD29C77D440049C7DF /* BeaverlistUITests.swift */; };
+		5627ADC029C77D440049C7DF /* BeaverlistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627ADBF29C77D440049C7DF /* BeaverlistUITestsLaunchTests.swift */; };
 		5627ADCF29C7CC8A0049C7DF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627ADCE29C7CC8A0049C7DF /* Colors.swift */; };
 		5627ADD429C9198A0049C7DF /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5627ADD329C9198A0049C7DF /* Icons.xcassets */; };
 		56AC095029C9E0B200743EF4 /* user_inputs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 56AC094F29C9E0B200743EF4 /* user_inputs.txt */; };
@@ -45,8 +45,8 @@
 		5627ADAF29C77D440049C7DF /* BeaverlistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaverlistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5627ADB329C77D440049C7DF /* beaverlistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beaverlistTests.swift; sourceTree = "<group>"; };
 		5627ADB929C77D440049C7DF /* BeaverlistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaverlistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5627ADBD29C77D440049C7DF /* beaverlistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beaverlistUITests.swift; sourceTree = "<group>"; };
-		5627ADBF29C77D440049C7DF /* beaverlistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beaverlistUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5627ADBD29C77D440049C7DF /* BeaverlistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaverlistUITests.swift; sourceTree = "<group>"; };
+		5627ADBF29C77D440049C7DF /* BeaverlistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaverlistUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5627ADCC29C786480049C7DF /* user_inputs.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = user_inputs.txt; path = test_script_data_input/user_inputs.txt; sourceTree = "<group>"; };
 		5627ADCE29C7CC8A0049C7DF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5627ADD329C9198A0049C7DF /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		5627ADBC29C77D440049C7DF /* beaverlistUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5627ADBD29C77D440049C7DF /* beaverlistUITests.swift */,
-				5627ADBF29C77D440049C7DF /* beaverlistUITestsLaunchTests.swift */,
+				5627ADBD29C77D440049C7DF /* BeaverlistUITests.swift */,
+				5627ADBF29C77D440049C7DF /* BeaverlistUITestsLaunchTests.swift */,
 			);
 			path = beaverlistUITests;
 			sourceTree = "<group>";
@@ -288,8 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5627ADC029C77D440049C7DF /* beaverlistUITestsLaunchTests.swift in Sources */,
-				5627ADBE29C77D440049C7DF /* beaverlistUITests.swift in Sources */,
+				5627ADC029C77D440049C7DF /* BeaverlistUITestsLaunchTests.swift in Sources */,
+				5627ADBE29C77D440049C7DF /* BeaverlistUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

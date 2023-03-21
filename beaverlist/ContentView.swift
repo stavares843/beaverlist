@@ -102,8 +102,7 @@ struct ContentView: View {
 
                     if let startRange = fullString.range(of: ">>"),
                       let endRange = fullString.range(
-                        of: "<<", range: startRange.upperBound..<fullString.endIndex)
-                    {
+                        of: "<<", range: startRange.upperBound..<fullString.endIndex) {
                       textToCopy = String(fullString[startRange.upperBound..<endRange.lowerBound])
                     } else if let range = fullString.range(of: ":") {
                       textToCopy = String(fullString[range.upperBound...])
