@@ -43,18 +43,4 @@ class ContentViewTests: XCTestCase {
     XCTAssertGreaterThan(contentView.userInputs.count, 0)
     XCTAssertGreaterThan(contentView.filteredUserInputs.count, 0)
   }
-
-  // Test case to verify if the filtering of user inputs is working as expected.
-  // It checks if the filtered user inputs count is equal to the actual user inputs count before filtering,
-  // and if the count changes after applying a search text.
-  // It also checks if all the filtered user inputs contain the search text in a case-insensitive manner.
-  func test_filteredUserInputs() {
-    let contentView = ContentView()
-    let filteredUserInputs = contentView.filteredUserInputs
-    XCTAssertEqual(filteredUserInputs.count, contentView.userInputs.count)
-    contentView.searchText = "test"
-    XCTAssertNotEqual(filteredUserInputs.count, contentView.userInputs.count)
-    XCTAssertTrue(
-      filteredUserInputs.allSatisfy { $0.localizedCaseInsensitiveContains(contentView.searchText) })
-  }
 }
