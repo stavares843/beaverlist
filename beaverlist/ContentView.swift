@@ -16,9 +16,14 @@ struct ContentView: View {
       return
     }
 
-    let regex = try! NSRegularExpression(pattern: #"user_input_\d+ = "(.*?)""#)
-    self.userInputs = regex.matches(in: data, range: NSRange(data.startIndex..., in: data)).map {
-      String(data[Range($0.range(at: 1), in: data)!])
+    do {
+      let regex = try NSRegularExpression(pattern: #"user_input_\d+ = "(.*?)""#)
+      self.userInputs = regex.matches(in: data, range: NSRange(data.startIndex..., in: data)).map {
+        String(data[Range($0.range(at: 1), in: data)!])
+      }
+    } catch {
+      print("Failed to create regular expression with error: \(error.localizedDescription)")
+      self.userInputs = []
     }
   }
 
@@ -39,41 +44,38 @@ struct ContentView: View {
           .padding()
         Spacer()
 
-        Menu {
-          Button(action: {
-            selectedGradient = Color.blueberryBlush
-          }) {
-            Text("Blueberry Blush")
-            Image("blueberry_blush")
+          Menu {
+              Button(action: {
+                  selectedGradient = Color.blueberryBlush
+              }) {
+                  Text("Blueberry Blush")
+                  Image("blueberry_blush")
+              }
+              Button(action: {
+                  selectedGradient = Color.slateMist
+              }) {
+                  Text("Slate Mist")
+                  Image("slate_mist")
+              }
+              Button(action: {
+                  selectedGradient = Color.mysticTwilight
+              }) {
+                  Text("Mystic Twilight")
+                  Image("mystic_twilight")
+              }
+              Button(action: {
+                  selectedGradient = Color.sunsetBlaze
+              }) {
+                  Text("Sunset Blaze")
+                  Image("sunset_blaze")
+              }
+          } label: {
+              Image("themes")
+                  .resizable()
+                  .frame(width: 40, height: 40)
+                  .font(.system(size: 15))
           }
-
-          Button(action: {
-            selectedGradient = Color.slateMist
-          }) {
-            Text("Slate Mist")
-            Image("slate_mist")
-          }
-
-          Button(action: {
-            selectedGradient = Color.mysticTwilight
-          }) {
-            Text("Mystic Twilight")
-            Image("mystic_twilight")
-          }
-
-          Button(action: {
-            selectedGradient = Color.sunsetBlaze
-          }) {
-            Text("Sunset Blaze")
-            Image("sunset_blaze")
-          }
-        } label: {
-          Image("themes")
-            .resizable()
-            .frame(width: 40, height: 40)
-            .font(.system(size: 15))
-        }
-        .padding(.trailing, 16)
+          .padding(.trailing, 16)
       }
 
       SearchBar(text: $searchText, placeholder: "Search")
