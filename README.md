@@ -41,34 +41,6 @@ https://user-images.githubusercontent.com/29093946/226730914-2edefcc7-3684-4a42-
 
 
 
-<table>
-    <thead>
-        <tr>
-            <th>BlueberryBlush</th>
-            <th>SlateMist</th>
-            <th>MysticTwilight</th>
-            <th>SunsetBlaze</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <img src="https://user-images.githubusercontent.com/29093946/226737486-8b4fa9f1-6ad8-41cd-9d36-2ca89de578be.png" />
-            </td>
-            <td>
-                <img src="https://user-images.githubusercontent.com/29093946/226737682-adb1ee5d-820b-4640-b63d-a8cec767938b.png" />
-            </td>
-            <td>
-                <img src="https://user-images.githubusercontent.com/29093946/226737736-77064d4a-79e6-4e1b-8c71-663aaffb1231.png" />
-            </td>
-            <td>
-                <img src="https://user-images.githubusercontent.com/29093946/226737792-b849c4dd-c9a2-42bd-839d-93743a695328.png" />
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-
 # License
 
 [MIT](https://github.com/stavares843/beaverlist/blob/main/LICENSE)
