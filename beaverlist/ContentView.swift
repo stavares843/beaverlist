@@ -107,89 +107,89 @@ struct ContentView: View {
                         of: "<<", range: startRange.upperBound..<fullString.endIndex) {
                       textToCopy = String(fullString[startRange.upperBound..<endRange.lowerBound])
                     } else if let range = fullString.range(of: ":") {
-                                          textToCopy = String(fullString[range.upperBound...])
-                                        }
+                      textToCopy = String(fullString[range.upperBound...])
+                    }
 
-                                        // Copy text to clipboard
-                                        UIPasteboard.general.string = textToCopy.trimmingCharacters(
-                                          in: .whitespacesAndNewlines)
-                                        print("Copied to clipboard: \(textToCopy)")
+                    // Copy text to clipboard
+                    UIPasteboard.general.string = textToCopy.trimmingCharacters(
+                      in: .whitespacesAndNewlines)
+                    print("Copied to clipboard: \(textToCopy)")
 
-                                        showToast = true
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                          showToast = false
-                                        }
-                                                         }
-                                                     }
-                                                     Spacer()
-                                                   }
-            .padding(.trailing, 10)
-                                                 }
-                                               }
-
+                    showToast = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                      showToast = false
+                    }
+                  }
               }
-                Spacer()
-
-                if showToast { // show the toast if `showToast` is true
-                    Text("Copied to clipboard")
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                        .background(selectedGradient)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .transition(.opacity)
-                        .animation(.easeInOut(duration: 0.3))
-                }
+              Spacer()
             }
+            .padding(.trailing, 10)
           }
         }
 
-  struct SearchBar: UIViewRepresentable {
-    @Binding var text: String
-    let placeholder: String
-
-    class Coordinator: NSObject, UISearchBarDelegate {
-      @Binding var text: String
-
-      init(text: Binding<String>) {
-        _text = text
       }
+      Spacer()
 
-      func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        text = searchText
-
-        // Show cancel button when user starts searching
-        searchBar.showsCancelButton = true
+      if showToast {  // show the toast if `showToast` is true
+        Text("Copied to clipboard")
+          .foregroundColor(.white)
+          .padding(.horizontal, 16)
+          .padding(.vertical, 8)
+          .background(selectedGradient)
+          .clipShape(RoundedRectangle(cornerRadius: 10))
+          .transition(.opacity)
+          .animation(.easeInOut(duration: 0.3))
       }
-
-      func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        searchBar.resignFirstResponder()
-        text = ""
-      }
-
-      func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = true
-      }
-
-      func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-      }
-    }
-
-    func makeCoordinator() -> Coordinator {
-      return Coordinator(text: $text)
-    }
-
-    func makeUIView(context: UIViewRepresentableContext<SearchBar>) -> UISearchBar {
-      let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
-      searchBar.delegate = context.coordinator
-      searchBar.placeholder = placeholder
-      searchBar.showsCancelButton = false  // Hide cancel button initially
-      return searchBar
-    }
-
-    func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<SearchBar>) {
-      uiView.text = text
     }
   }
+}
+
+struct SearchBar: UIViewRepresentable {
+  @Binding var text: String
+  let placeholder: String
+
+  class Coordinator: NSObject, UISearchBarDelegate {
+    @Binding var text: String
+
+    init(text: Binding<String>) {
+      _text = text
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+      text = searchText
+
+      // Show cancel button when user starts searching
+      searchBar.showsCancelButton = true
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+      searchBar.showsCancelButton = false
+      searchBar.resignFirstResponder()
+      text = ""
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+      searchBar.showsCancelButton = true
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+      searchBar.showsCancelButton = false
+    }
+  }
+
+  func makeCoordinator() -> Coordinator {
+    return Coordinator(text: $text)
+  }
+
+  func makeUIView(context: UIViewRepresentableContext<SearchBar>) -> UISearchBar {
+    let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
+    searchBar.delegate = context.coordinator
+    searchBar.placeholder = placeholder
+    searchBar.showsCancelButton = false  // Hide cancel button initially
+    return searchBar
+  }
+
+  func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<SearchBar>) {
+    uiView.text = text
+  }
+}
