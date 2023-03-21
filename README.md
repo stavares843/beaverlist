@@ -2,6 +2,9 @@
   <img src="https://user-images.githubusercontent.com/29093946/226750819-82d48dc1-7e4f-4477-9d75-0636ac16059b.gif"/>
 </p>
 
+<p align="center">
+   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat" /></a>
+</p>
 
 ## Description
 
@@ -40,8 +43,3 @@ https://user-images.githubusercontent.com/29093946/226730914-2edefcc7-3684-4a42-
 ## Themes
 
 https://user-images.githubusercontent.com/29093946/226753666-99150765-79b0-4525-a765-a9fd2c82704f.mov
-
-
-# License
-
-[MIT](https://github.com/stavares843/beaverlist/blob/main/LICENSE)
