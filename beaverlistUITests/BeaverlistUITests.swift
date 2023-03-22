@@ -62,11 +62,4 @@ class BeaverlistUITests: XCTestCase {
         // Check if the toast is displayed
         app.staticTexts["Copied to clipboard"].tap()
     }
-
-    /*func testCopyToClipboard() {
-        let app = XCUIApplication()
-        app.staticTexts["This string contains trademark symbol: ™"].tap()
-        // Assert that the correct text was copied to the clipboard
-        XCTAssertEqual(UIPasteboard.general.string, "™")
-    }*/
 }
