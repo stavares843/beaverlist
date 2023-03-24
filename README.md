@@ -20,8 +20,8 @@ Built with SwiftUI, *Beaverlist* is a tool for performing data input manual test
 
 - `git clone git@github.com:stavares843/beaverlist.git`
 - `cd beaverlist`
-- in XCode, go to `Signing and Capabilities` and add yourself in the team field
-- change the bundle identifier to something else
+- In Xcode, go to `Signing and Capabilities` and add yourself in the team field
+- Change the bundle identifier to something else
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/29093946/226729839-926b4665-2adf-47ea-884a-5c242c57e155.png"/>
