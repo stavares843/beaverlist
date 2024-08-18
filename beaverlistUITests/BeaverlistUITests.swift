@@ -1,10 +1,3 @@
-//
-//  BeaverlistUITests.swift
-//  BeaverlistUITests
-//
-//  Created by Sara on 19/03/2023.
-//
-
 import XCTest
 
 class BeaverlistUITests: XCTestCase {
